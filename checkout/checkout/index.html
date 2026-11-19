@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>تکمیل خرید</title>
+
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/fields.css" />
+    <link rel="stylesheet" href="css/shipping.css" />
+    <link rel="stylesheet" href="css/summary.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+    <main class="checkout">
+      <section class="form-area">
+        <h1 class="section-title section-title--main">
+          <b>اطلاعات کاربری</b> شما
+        </h1>
+
+        <form id="checkout-form" action="" method="post">
+          <!-- اطلاعات تحویل گیرنده -->
+          <div class="block">
+            <div class="block__head"><h3>اطلاعات تحویل گیرنده</h3></div>
+            <div class="fields">
+              <div class="field">
+                <label for="fullname">نام و نام خانوادگی</label>
+                <input
+                  class="input"
+                  type="text"
+                  id="fullname"
+                  name="fullname"
+                  value=""
+                  autocomplete="name"
+                />
+              </div>
+              <div class="field">
+                <label for="phone">شماره تماس گیرنده</label>
+                <input
+                  class="input"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value=""
+                  inputmode="tel"
+                  autocomplete="tel"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- آدرس تحویل -->
+          <div class="block">
+            <div class="block__head">
+              <h3>آدرس تحویل</h3>
+              <a href="#" class="link-add">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                >
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+                انتخاب آدرس
+              </a>
+            </div>
+
+            <div class="fields">
+              <div class="field">
+                <label for="province">استان</label>
+                <select class="select" id="province" name="province">
+                  <!-- گزینه‌های استان‌ها -->
+                  <option value="تهران">تهران</option>
+                  <option value="کرج">کرج</option>
+                  <option value="آبعلی">آبعلی</option>
+                  <option value="دماوند">دماوند</option>
+                  <option value="مازندران">مازندران</option>
+                  <option value="مرکزی">مرکزی</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="city">شهر</label>
+                <select class="select" id="city" name="city">
+                  <!-- گزینه‌های شهرها -->
+                  <option value="تهران">تهران</option>
+                  <option value="محمودآباد">محمودآباد</option>
+                  <option value="سرخ رود">سرخ رود</option>
+                  <option value="سیاه رودسر">سیاه رودسر</option>
+                  <option value="میانکلمرز">میانکلمرز</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="plaque">پلاک</label>
+                <input
+                  class="input"
+                  type="text"
+                  id="plaque"
+                  name="plaque"
+                  value=""
+                  inputmode="numeric"
+                />
+              </div>
+              <div class="field">
+                <label for="postal">کدپستی</label>
+                <input
+                  class="input"
+                  type="text"
+                  id="postal"
+                  name="postal"
+                  value=""
+                  inputmode="numeric"
+                  maxlength="10"
+                  autocomplete="postal-code"
+                />
+              </div>
+              <div class="field field--full">
+                <label for="address">نشانی پستی</label>
+                <textarea
+                  class="textarea"
+                  id="address"
+                  name="address"
+                  rows="4"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- نحوه ارسال -->
+          <div class="shipping">
+            <div class="shipping__head">
+              <h3>انتخاب <b>نحوه ارسال</b></h3>
+              <span class="badge"
+                ><span data-var="cart-count"></span>3 محصول در سبد خرید</span
+              >
+            </div>
+
+            <div class="ship-list">
+              <label class="ship">
+                <input type="radio" name="shipping" value="" checked />
+                <span class="ship__check">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="3.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m5 12 5 5 9-10" />
+                  </svg>
+                </span>
+                <span class="ship__title"
+                  >تیپاکس با بیمه (1 تا 3 روز کاری)</span
+                >
+                <span class="ship__price"
+                  ><span data-var="ship-price">45,000</span>
+                  <small>تومان</small></span
+                >
+              </label>
+
+              <!-- روش ارسال بعدی: همین بلوک را کپی کنید -->
+              <label class="ship">
+                <input type="radio" name="shipping" value="" />
+                <span class="ship__check">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="3.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m5 12 5 5 9-10" />
+                  </svg>
+                </span>
+                <span class="ship__title">پست پیشتاز (2 تا 5 روز کاری)</span>
+                <span class="ship__price"
+                  ><span data-var="ship-price"></span>
+                  <small>تومان</small></span
+                >
+              </label>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!-- ===================== جزئیات خرید (در موبایل بعد از فرم) ===================== -->
+      <aside class="summary" aria-label="اطلاعات خرید">
+        <h 2 class="summary__title"><b>اطلاعات</b> خرید</h>
+
+        <!-- ===== شروع آیتم محصول: برای هر محصول کپی کنید ===== -->
+        <article class="cart-item">
+          <div class="cart-item__img">
+            <img
+              src="./assets/images/products/475e27a9dd671663eb2133230036d0356212741d.png"
+              alt=""
+            />
+          </div>
+
+          <div class="cart-item__body">
+            <div class="cart-item__top">
+              <div class="cart-item__names">
+                <span class="cart-item__en" data-var="product-name-en"
+                  >Hugo Just Different</span
+                >
+                <span class="cart-item__fa" data-var="product-name-fa"
+                  >هوگو بوس جاست دیفرنت</span
+                >
+              </div>
+              <span class="cart-item__size"
+                ><b data-var="product-size">100</b> میل</span
+              >
+            </div>
+
+            <div class="cart-item__bottom">
+              <span class="cart-item__price"
+                ><span data-var="product-price">1,550,000</span>
+                <small>تومان</small></span
+              >
+
+              <button type="button" class="qty-btn" aria-label="افزایش تعداد">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                >
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <input
+                class="qty-input"
+                type="number"
+                min="1"
+                value="1"
+                aria-label="تعداد"
+              />
+              <button
+                type="button"
+                class="qty-btn qty-btn--del"
+                aria-label="حذف محصول"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14M10 11v5M14 11v5"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="cart-item">
+          <div class="cart-item__img">
+            <img
+              src="./assets/images/products/4e1b2b89e1389cadef3f9cefda802e21f0d91497.png"
+              alt=""
+            />
+          </div>
+
+          <div class="cart-item__body">
+            <div class="cart-item__top">
+              <div class="cart-item__names">
+                <span class="cart-item__en" data-var="product-name-en"
+                  >Hugo Just Different</span
+                >
+                <span class="cart-item__fa" data-var="product-name-fa"
+                  >هوگو بوس جاست دیفرنت</span
+                >
+              </div>
+              <span class="cart-item__size"
+                ><b data-var="product-size">100</b> میل</span
+              >
+            </div>
+
+            <div class="cart-item__bottom">
+              <span class="cart-item__price"
+                ><span data-var="product-price">1,550,000</span>
+                <small>تومان</small></span
+              >
+
+              <button type="button" class="qty-btn" aria-label="افزایش تعداد">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                >
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <input
+                class="qty-input"
+                type="number"
+                min="1"
+                value="1"
+                aria-label="تعداد"
+              />
+              <button
+                type="button"
+                class="qty-btn qty-btn--del"
+                aria-label="حذف محصول"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14M10 11v5M14 11v5"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="cart-item">
+          <div class="cart-item__img">
+            <img
+              src="./assets/images/products/87cc61b3c899bf01130d8b31fc1d83376aff5b93.png"
+              alt=""
+            />
+          </div>
+
+          <div class="cart-item__body">
+            <div class="cart-item__top">
+              <div class="cart-item__names">
+                <span class="cart-item__en" data-var="product-name-en"
+                  >Hugo Just Different</span
+                >
+                <span class="cart-item__fa" data-var="product-name-fa"
+                  >هوگو بوس جاست دیفرنت</span
+                >
+              </div>
+              <span class="cart-item__size"
+                ><b data-var="product-size">100</b> میل</span
+              >
+            </div>
+
+            <div class="cart-item__bottom">
+              <span class="cart-item__price"
+                ><span data-var="product-price">1,550,000</span>
+                <small>تومان</small></span
+              >
+
+              <button type="button" class="qty-btn" aria-label="افزایش تعداد">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                >
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <input
+                class="qty-input"
+                type="number"
+                min="1"
+                value="1"
+                aria-label="تعداد"
+              />
+              <button
+                type="button"
+                class="qty-btn qty-btn--del"
+                aria-label="حذف محصول"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14M10 11v5M14 11v5"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+        <!-- ===== پایان آیتم محصول ===== -->
+
+        <!-- مجموع‌ها -->
+        <dl class="totals">
+          <div class="totals__row">
+            <dt>خرید شما:</dt>
+            <dd>
+              <span data-var="subtotal">4,650,000</span> <small>تومان</small>
+            </dd>
+          </div>
+          <d iv class="totals__row">
+            <dt>هزینه ارسال:</dt>
+            <dd>
+              <span data-var="shipping-cost">45,000</span> <small>تومان</small>
+            </dd>
+          </d>
+          <div class="totals__row totals__row--total">
+            <dt>مبلغ قابل پرداخت:</dt>
+            <dd>
+              <span data-var="total">4,695,000</span> <small>تومان</small>
+            </dd>
+          </div>
+        </dl>
+
+        <!-- درگاه پرداخت -->
+        <div class="gateway">
+          <p class="gateway__text">
+            پرداخت امن با کارت‌های عضو شتاب از طریق
+            <b>درگاه زرین پال <span data-var="gateway-name"></span></b>
+          </p>
+          <!-- لوگوی درگاه: assets/images/gateway/ -->
+          <span class="gateway__logo"
+            ><img src="./assets/images/gateway/Payment Gateway.svg" alt=""
+          /></span>
+        </div>
+
+        <button type="submit" form="checkout-form" class="btn-pay">
+          پرداخت و خرید محصول
+        </button>
+      </aside>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+/* ---------- پنل خلاصه خرید ---------- */
+.summary {
+  min-width: 0;
+  background: var(--c-panel);
+  border-radius: var(--r-lg);
+  padding: 20px 16px;
+  align-self: start;
+}
+.summary__title {
+  margin: 0 0 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--c-border);
+  font-size: 16px;
+  font-weight: 400;
+}
+.summary__title b { font-weight: 800; }
+
+.cart-item {
+  display: flex;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--c-border);
+}
+.cart-item__img {
+  flex: none;
+  width: 84px; height: 84px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 6px;
+  display: grid; place-items: center;
+}
+.cart-item__img img { width: 100%; height: 100%; object-fit: contain; }
+
+.cart-item__body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+
+.cart-item__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+.cart-item__names { min-width: 0; }
+.cart-item__en { display: block; font-size: 12px; font-weight: 800; }
+.cart-item__fa { display: block; font-size: 12px; font-weight: 600; }
+.cart-item__size { font-size: 12px; color: var(--c-muted); white-space: nowrap; }
+.cart-item__size b { color: var(--c-text); font-weight: 800; }
+
+.cart-item__bottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cart-item__price {
+  margin-inline-end: auto;           /* قیمت سمت راست، کنترل‌ها سمت چپ */
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.cart-item__price small { color: var(--c-muted); font-weight: 400; font-size: 10px; }
+
+.qty-btn {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  display: grid; place-items: center;
+  flex: none;
+}
+.qty-btn--del { color: var(--c-primary); }
+.qty-input {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--c-border);
+  background: transparent;
+  text-align: center;
+  padding: 0;
+  font-size: 12px;
+  -moz-appearance: textfield;
+}
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+/* مجموع‌ها */
+.totals {
+  background: #fff;
+  border-radius: var(--r-md);
+  padding: 16px;
+  margin-top: 16px;
+}
+.totals__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 13px;
+  padding-block: 8px;
+}
+.totals__row dt { color: #55555a; }
+.totals__row dd { margin: 0; color: var(--c-muted); font-size: 12px; }
+.totals__row dd small { font-size: 10px; }
+.totals__row--total {
+  margin-top: 6px;
+  padding-top: 16px;
+  border-top: 1px solid var(--c-border);
+}
+.totals__row--total dt { color: var(--c-text); font-weight: 700; }
+.totals__row--total dd { color: var(--c-text); font-weight: 800; font-size: 15px; }
+
+/* درگاه پرداخت */
+.gateway {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border-radius: var(--r-md);
+  padding: 12px 14px;
+  margin-top: 12px;
+  font-size: 11px;
+}
+.gateway__logo {
+  flex: none;
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  background: #fff6cf;
+  display: grid; place-items: center;
+}
+.gateway__logo img { width: 70%; height: 70%; object-fit: contain; }
+
+.btn-pay {
+  width: 100%;
+  margin-top: 16px;
+  height: 48px;
+  border-radius: var(--r-pill);
+  background: var(--c-primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  transition: filter .15s;
+}
+.btn-pay:hover { filter: brightness(.92); }
+
+.gateway__text { margin: 0; flex: 1; }

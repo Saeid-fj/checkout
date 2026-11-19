@@ -1,0 +1,56 @@
+/* ---------- نحوه ارسال ---------- */
+.shipping__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--c-border);
+  margin-bottom: 16px;
+}
+.shipping__head h3 { margin: 0; font-size: 16px; font-weight: 400; }
+.shipping__head h3 b { font-weight: 800; }
+
+.badge {
+  background: var(--c-primary-soft);
+  color: var(--c-primary);
+  font-size: 12px;
+  padding: 6px 16px;
+  border-radius: var(--r-pill);
+}
+
+.ship-list { display: grid; gap: 12px; }
+
+.ship {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--c-field);
+  border: 1px solid transparent;
+  border-radius: var(--r-pill);
+  cursor: pointer;
+  transition: border-color .15s, background-color .15s;
+}
+.ship:has(input:checked) { border-color: var(--c-primary); background: #fff; }
+.ship:has(input:focus-visible) { outline: 2px solid var(--c-primary); outline-offset: 2px; }
+
+.ship input { position: absolute; opacity: 0; pointer-events: none; }
+
+.ship__check {
+  flex: none;
+  width: 20px; height: 20px;
+  border-radius: 6px;
+  border: 1.5px solid #c9c9ce;
+  background: #fff;
+  display: grid; place-items: center;
+}
+.ship__check svg { width: 12px; height: 12px; opacity: 0; stroke: #fff; }
+.ship:has(input:checked) .ship__check { background: var(--c-primary); border-color: var(--c-primary); }
+.ship:has(input:checked) .ship__check svg { opacity: 1; }
+
+.ship__title { flex: 1; font-size: 13px; font-weight: 700; }
+.ship__price { font-size: 13px; font-weight: 700; white-space: nowrap; }
+.ship__price small { color: var(--c-muted); font-weight: 400; font-size: 11px; }

@@ -1,0 +1,23 @@
+/* ==========================================================
+   تبلت (≥ 640px)
+   ========================================================== */
+@media (min-width: 640px) {
+  .checkout { padding: 24px; }
+  .fields { grid-template-columns: repeat(2, 1fr); }
+  .ship-list { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ==========================================================
+   دسکتاپ (≥ 992px): فرم راست، خلاصه خرید چپ
+   ========================================================== */
+@media (min-width: 992px) {
+  .checkout {
+    grid-template-columns: minmax(0, 1fr) 360px;   /* ستون اول (فرم) در RTL سمت راست قرار می‌گیرد */
+    gap: 32px;
+    padding: 32px;
+    border: 1px solid var(--c-border);
+    border-radius: 28px;
+    margin-block: 32px;
+  }
+  .summary { position: sticky; top: 24px; }
+}
